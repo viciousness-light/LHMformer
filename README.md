@@ -3,7 +3,7 @@
 #### Required Packages
 
 ```
-pytorch==2.6.0
+pytorch>=2.4.0
 easy-torch
 easydict
 packaging
