@@ -1,0 +1,11 @@
+easy-torch
+easydict
+packaging
+setproctitle
+pandas
+scikit-learn
+tables
+sympy
+openpyxl
+setuptools
+numpy
