@@ -1,5 +1,9 @@
 # LHMformer:Long-range Historical Memory-EnhancedTransformer for Traffic Forecasting
 ![LHMformer_arch](figures/LHMformer_arch.png)
+<h4>LHMformer_arch</h4>
+
+<img src="figures/LHMformer_arch.png" width="200"/>
+<img src="figures/LHMformer_arch.png" height="400"/>
 #### Required Packages
 
 ```
@@ -23,11 +27,11 @@ You can download the `dataset.zip` file from [Google Drive](https://drive.google
 
 #### Performance on Traffic Forecasting Benchmarks
 
-![Performance 1](figures/performance.png)
+![Performance 1](figures/Performance.png)
 
-![Performance 2](figures/performance(2).png)
+![Performance 2](figures/Performance(2).png)
 
-![Performance 3](figures/performance(3).png)
+![Performance 3](figures/Performance(3).png)
 
 #### Training Commands
 
