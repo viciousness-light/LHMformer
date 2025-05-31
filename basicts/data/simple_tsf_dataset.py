@@ -125,8 +125,7 @@ class TimeSeriesForecastingDataset(BaseDataset):
             future_data = data[index + self.T_long:index + self.T_long + self.output_len]
         elif self.mode == 'train':
             if index + self.input_len - self.T_long < 0:
-                long_history_data = np.zeros((self.T_long, data.shape[1], data.shape[2]), dtype=np.float32)
-                long_history_data = torch.from_numpy(long_history_data).float()
+                long_history_data = torch.zeros((self.T_long, data.shape[1], data.shape[2]), dtype=torch.float32)
             else:
                 long_history_data = data[index - self.T_long + self.input_len:index + self.input_len]
             history_data = data[index:index + self.input_len]
