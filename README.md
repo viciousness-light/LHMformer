@@ -26,7 +26,7 @@ You can download the `dataset.zip` file from [Google Drive](https://drive.google
 
 ```bash
 
-python experiments/train.py --cfg stid/${dataset}.py --gpus '0'
+python experiments/train.py --cfg LHMformer/${dataset}.py --gpus '0'
 
 
 ```
