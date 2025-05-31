@@ -1,7 +1,11 @@
 # LHMformer:Long-range Historical Memory-EnhancedTransformer for Traffic Forecasting
 
 #### LHMformer_arch
-<img src="figures/LHMformer_arch.png" height="400"/>
+
+<p align="center">
+  <img src="figures/LHMformer_arch.png" height="400"/>
+</p>
+
 #### Required Packages
 
 ```
