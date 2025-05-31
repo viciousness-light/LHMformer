@@ -2,9 +2,7 @@
 
 #### LHMformer_arch
 
-<p align="center">
-  <img src="figures/LHMformer_arch.png" height="400"/>
-</p>
+<img src="figures/LHMformer_arch.png" height="400"/>
 
 #### Required Packages
 
