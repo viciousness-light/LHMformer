@@ -70,7 +70,7 @@ class MLP_Block(nn.Module):
 
 class MLP_Layer(nn.Module):
     def __init__(
-        self,input_dim: int,hidden_dims,output_dim,dropout: float,activation=nn.ReLU):
+        self,input_dim,hidden_dims,output_dim,dropout,activation=nn.ReLU):
         super().__init__()
         layers = []
         in_dim = input_dim
