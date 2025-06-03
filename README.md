@@ -27,7 +27,7 @@ You can download the `dataset.zip` file from [Google Drive](https://drive.google
 
 #### Performance on Traffic Forecasting Benchmarks
 <img src="figures/Performance.png" height="300"/>
-<img src="figures/Performance(2).png" height="200"/> <img src="figures/Performance(3).png" height="200"/>
+<img src="figures/Performance (2).png" height="200"/> <img src="figures/Performance (3).png" height="200"/>
 
 #### Training Commands
 
