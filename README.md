@@ -26,8 +26,8 @@ numpy
 You can download the `dataset.zip` file from [Google Drive](https://drive.google.com/file/d/19c8YJDuRIQEsgPWSP_UcIVF_Vqq0fRFV/view?usp=drive_link)
 
 #### Performance on Traffic Forecasting Benchmarks
-<img src="figures/Performance .png" height="300"/>
-<img src="figures/Performance  (2).png" height="200"/> <img src="figures/Performance  (3).png" height="200"/>
+<img src="figures/Performance.png" height="300"/>
+<img src="figures/Performance(2).png" height="200"/> <img src="figures/Performance(3).png" height="200"/>
 
 #### Training Commands
 
