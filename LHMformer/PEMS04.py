@@ -121,7 +121,7 @@ CFG.TRAIN.OPTIM.PARAM = {
 CFG.TRAIN.LR_SCHEDULER = EasyDict()
 CFG.TRAIN.LR_SCHEDULER.TYPE = "MultiStepLR"
 CFG.TRAIN.LR_SCHEDULER.PARAM = {
-    "milestones": [35,50,70,90],
+    "milestones": [35,50,70],
     "gamma": 0.1
 }
 # Train data loader settings
