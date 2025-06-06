@@ -121,7 +121,7 @@ CFG.TRAIN.OPTIM.PARAM = {
 CFG.TRAIN.LR_SCHEDULER = EasyDict()
 CFG.TRAIN.LR_SCHEDULER.TYPE = "MultiStepLR"
 CFG.TRAIN.LR_SCHEDULER.PARAM = {
-    "milestones": [25, 40, 55,99],
+    "milestones": [25, 40, 55],
     "gamma": 0.1
 }
 
@@ -129,7 +129,7 @@ CFG.TRAIN.LR_SCHEDULER.PARAM = {
 CFG.TRAIN.DATA = EasyDict()
 CFG.TRAIN.DATA.BATCH_SIZE = 16
 CFG.TRAIN.DATA.SHUFFLE = True
-CFG.TRAIN.EARLY_STOPPING_PATIENCE = 15
+CFG.TRAIN.EARLY_STOPPING_PATIENCE = 20
 ############################## Validation Configuration ##############################
 CFG.VAL = EasyDict()
 CFG.VAL.INTERVAL = 1
