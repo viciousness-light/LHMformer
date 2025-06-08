@@ -71,7 +71,7 @@ class LHMformer(nn.Module):
             dropout=self.MLP_drop,
             activation=nn.ReLU
         )
-    def forward(self, history_data: torch.Tensor, future_data: torch.Tensor, long_history_data: torch.Tensor, batch_seen: int, epoch: int, train: bool, **kwargs) -> torch.Tensor:
+    def forward(self, history_data: torch.Tensor, future_data: torch.Tensor, long_history_data: torch.Tensor, batch_seen: int, epoch: int, train: bool, **kwargs):
         """Feed forward of LHMformer.
 
         Args:
