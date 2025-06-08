@@ -50,16 +50,14 @@ class TimeSeriesForecastingDataset(BaseDataset):
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     def _load_description(self) -> dict:
         """
-        Loads the description of the dataset from a JSON file.
-
+        Loads time series data from a file, splits it according to the selected mode, and sets the index range for each mode accordingly.
+        
         Returns:
-            dict: A dictionary containing metadata about the dataset, such as its shape and other properties.
-
+            np.ndarray: The index array corresponding to the specified mode (train, validation, or test).
+        
         Raises:
-            FileNotFoundError: If the description file is not found.
-            json.JSONDecodeError: If there is an error decoding the JSON data.
+            ValueError: If there is an issue with loading the data file or if the data shape is not as expected.
         """
-
         try:
             with open(self.description_file_path, 'r') as f:
                 return json.load(f)
