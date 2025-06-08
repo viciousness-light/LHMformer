@@ -41,6 +41,15 @@ class ConvBlock(nn.Module):
 
 
 class DilatedConvEncoder(nn.Module):
+    """
+    Dilated Convolutional Encoder using a stack of residual ConvBlocks with increasing dilation rates.
+
+    Args:
+        in_channels (int): Number of input channels.
+        channels (list of int): Output channels for each ConvBlock layer.
+        kernel_size (int): Kernel size for all convolutions.
+
+    """
     def __init__(self, in_channels, channels, kernel_size):
         super().__init__()
         layers = []
@@ -69,6 +78,17 @@ class MLP_Block(nn.Module):
 
 
 class MLP_Layer(nn.Module):
+    """
+    Multi-Layer Perceptron (MLP) module composed of linear layers and optional residual blocks.
+
+    Args:
+        input_dim (int): Dimension of input features.
+        hidden_dims (list of int): List of hidden layer dimensions.
+        output_dim (int): Dimension of output features.
+        dropout (float): Dropout probability.
+        activation (nn.Module): Activation function class (default: ReLU).
+
+    """
     def __init__(
         self,input_dim,hidden_dims,output_dim,dropout,activation=nn.ReLU):
         super().__init__()
@@ -91,20 +111,15 @@ class MLP_Layer(nn.Module):
 
 
 class AttentionLayer(nn.Module):
-    """Perform attention across the -2 dim (the -1 dim is `model_dim`).
-
-    Make sure the tensor is permuted to correct shape before attention.
-
-    E.g.
-    - Input shape (batch_size, in_steps, num_nodes, model_dim).
-    - Then the attention will be performed across the nodes.
-
-    Also, it supports different src and tgt length.
-
-    But must `src length == K length == V length`.
-
     """
+    Multi-head attention layer.
 
+    Args:
+        model_dim (int): Total feature dimension.
+        num_heads (int): Number of attention heads.
+        mask (bool): Whether to apply a causal mask (for autoregressive decoding).
+
+    """ 
     def __init__(self, model_dim, num_heads=8, mask=False):
         super().__init__()
 
