@@ -102,14 +102,19 @@ class TimeSeriesForecastingDataset(BaseDataset):
 
     def __getitem__(self, index: int) -> dict:
         """
-        Retrieves a sample from the dataset at the specified index, considering both the input and output lengths.
-
+        Retrieves a sample from the dataset at the specified index, including historical inputs, 
+        future targets, and long-term historical context.
+    
         Args:
-            index (int): The index of the desired sample in the dataset.
-
+            index (int): The index of the sample to retrieve
+    
         Returns:
-            dict: A dictionary containing 'inputs' and 'target', where both are slices of the dataset corresponding to
-                  the historical input data and future prediction data, respectively.
+            dict: A dictionary containing three key-value pairs:
+                - inputs: Slice of historical input data, shape [input_len, ...]
+                - target: Slice of future prediction data, shape [output_len, ...]
+                - long_inputs: Slice of long-term historical data for capturing long-range dependencies, 
+                               shape [T_long, ...]. May contain zero-padding in training mode when 
+                               historical data is insufficient.
         """
         if self.mode == 'valid':
             data = self.valid_data
