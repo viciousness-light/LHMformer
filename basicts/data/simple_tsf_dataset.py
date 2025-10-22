@@ -134,6 +134,15 @@ class TimeSeriesForecastingDataset(BaseDataset):
                 long_history_data = data[index - self.T_long + self.input_len:index + self.input_len]
             history_data = data[index:index + self.input_len]
             future_data = data[index + self.input_len:index + self.input_len + self.output_len]
+                
+        # Convert all numpy arrays to torch tensors to avoid collate error
+        if isinstance(history_data, np.ndarray):
+            history_data = torch.from_numpy(history_data).float()
+        if isinstance(future_data, np.ndarray):
+            future_data = torch.from_numpy(future_data).float()
+        if isinstance(long_history_data, np.ndarray):
+            long_history_data = torch.from_numpy(long_history_data).float()
+  
         return {'inputs': history_data, 'target': future_data,'long_inputs': long_history_data}
     def __len__(self) -> int:
         """
